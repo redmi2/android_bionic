@@ -38,10 +38,6 @@
 #include <bits/lockf.h>
 #include <bits/posix_limits.h>
 
-#ifdef USE_WRAPPER
-#include "codeaurora/PropClientDispatchWrite.h"
-#endif
-
 __BEGIN_DECLS
 
 #define STDIN_FILENO	0
@@ -81,6 +77,7 @@ __BEGIN_DECLS
 extern char** environ;
 
 extern __noreturn void _exit(int __status);
+
 extern pid_t  fork(void);
 extern pid_t  vfork(void);
 extern pid_t  getpid(void);
